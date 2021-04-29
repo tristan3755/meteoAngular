@@ -164,7 +164,6 @@ to{
 }
 }
 /*************************************api*********************/
-
 .apiOn{
     background-color:transparent;
     position: absolute;
@@ -175,8 +174,7 @@ to{
     border-radius: 5px;
     backdrop-filter: blur(10px);
 
-}
-.apiOff{
+}.apiOff{
     background-color:#2d3436;
     position: absolute;
     display: none;
@@ -184,4 +182,7 @@ to{
     height: 83vh;
     width: 83%;
     border-radius: 5px;
+}.nuagePluvieux,.nuageEclaircie,.clear{
+    width: 200px;
+    height: 200px;
 }

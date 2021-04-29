@@ -12,7 +12,6 @@ export class NavBarComponent implements OnInit {
   villesNav: navBar[];
  infosNancy:any=[];
  nancyButton=false
-iconMeteo="infosNancy.weather[0].icon"
 
   constructor(private serviceNav: navService, private nancy:NancyService) {
     this.villesNav = [];

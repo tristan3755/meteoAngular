@@ -34,6 +34,54 @@
 				<h1>{{infosNancy.name}}</h1>
 				<p>{{infosNancy.weather[0].main}}</p>
 				<p>{{infosNancy.weather[0].description}}</p>
-				<img [src]="iconMeteo"/>
+				<div class="nuagePluvieux" *ngIf="infosNancy.weather[0].description==='cloudy'"><svg width="100%" height="100%" viewBox="0 0 267 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+					<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+					<path d="M17.8572 135.256L31.4787 119.286" stroke="#F1C40F"/>
+					<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+					<path d="M124.839 37.3017L132.581 17.7917" stroke="#F1C40F"/>
+					<path d="M21.9068 63.8422L3.09897 54.5238" stroke="#F1C40F"/>
+					<path d="M36.7854 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+					<path d="M94.4042 21.9066L96.2707 1" stroke="#F1C40F"/>
+					<path d="M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" fill="#2C3E50"/>
+					<path d="M122.752 132C144.5 121 126.805 93.7582 122.752 88.938M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" stroke="#292E33" stroke-width="5"/>
+					</svg>
+				</div>
+				<div class="nuageEclaircie" *ngIf="infosNancy.weather[0].description==='scattered clouds'"><svg width="100%" height="100%" viewBox="0 0 267 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+					<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+					<path d="M17.8572 135.256L31.4787 119.286" stroke="#F1C40F"/>
+					<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+					<path d="M124.839 37.3017L132.581 17.7917" stroke="#F1C40F"/>
+					<path d="M21.9068 63.8422L3.09897 54.5238" stroke="#F1C40F"/>
+					<path d="M36.7854 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+					<path d="M94.4042 21.9066L96.2707 1" stroke="#F1C40F"/>
+					<path d="M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" fill="#EEEEEE"/>
+					<path d="M122.752 132C144.5 121 126.805 93.7582 122.752 88.938M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" stroke="#E2E2E2" stroke-width="5"/>
+					</svg>
+					
+				</div>
+				<div class="clear" *ngIf="infosNancy.weather[0].description==='clear sky'">
+					<svg width="100%" height="100%" viewBox="0 0 165 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+						<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+						<path d="M6.23289 133.027L24.1506 122.094" stroke="#F1C40F"/>
+						<path d="M78 167.971L78.8786 147" stroke="#F1C40F"/>
+						<path d="M118.307 157.474L108.359 138.991" stroke="#F1C40F"/>
+						<path d="M130.312 114.521L149.309 123.448" stroke="#F1C40F"/>
+						<path d="M66.8572 88.2559L80.4787 72.2865" stroke="#F1C40F"/>
+						<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+						<path d="M121.15 34.8256L136.271 20.2679" stroke="#F1C40F"/>
+						<path d="M21.9069 63.8422L3.099 54.5238" stroke="#F1C40F"/>
+						<path d="M36.7853 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+						<path d="M94.4043 21.9066L96.2708 1" stroke="#F1C40F"/>
+						<path d="M143.266 53.9789L163.319 47.7769" stroke="#F1C40F"/>
+						<path d="M37 157.969L50.6215 142" stroke="#F1C40F"/>
+						<path d="M143.815 86.5692L164.777 85.493" stroke="#F1C40F"/>
+						</svg>
+						
+				</div>
+				<p>{{infosNancy.main.temp}}</p>
+				<p>{{infosNancy.wind.speed}}</p>
 			</article>
 </section>
