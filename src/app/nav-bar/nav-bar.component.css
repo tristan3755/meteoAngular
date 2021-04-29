@@ -163,3 +163,25 @@ to{
    filter: blur(0px);
 }
 }
+/*************************************api*********************/
+
+.apiOn{
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    height: 83vh;
+    width: 83%;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+
+}
+.apiOff{
+    background-color:#2d3436;
+    position: absolute;
+    display: none;
+    align-self: center;
+    height: 83vh;
+    width: 83%;
+    border-radius: 5px;
+}

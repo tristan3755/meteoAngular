@@ -23,10 +23,17 @@
 				</linearGradient>
 				</defs>
 				</svg>
+			
 	</article>
-    	<header>
-       	 <article>
-            <div *ngFor='let ville of getNav()' class="hover"><button>{{ville.ville | uppercase}}</button></div>
-        	</article>
-    	</header>
+    		<header>
+       			 <article>
+            		<div *ngFor='let ville of getNav()' class="hover"><button (click)="nancyOn()">{{ville.ville | uppercase}}</button></div>
+       			 </article>
+    		</header>
+			<article [class.apiOn]="nancyButton===true" [class.apiOff]="nancyButton===false">
+				<h1>{{infosNancy.name}}</h1>
+				<p>{{infosNancy.weather[0].main}}</p>
+				<p>{{infosNancy.weather[0].description}}</p>
+				<img [src]="iconMeteo"/>
+			</article>
 </section>
