@@ -27,7 +27,10 @@
 	</article>
     		<header>
        			 <article>
-            		<div *ngFor='let ville of getNav()' class="hover"><button (click)="nancyOn()">{{ville.ville | uppercase}}</button></div>
+            		 <div class="hover"><button (click)="nancyOn()">{{getNav()[0].ville | uppercase}}</button></div> 
+					 <div class="hover"><button (click)="strasbourgOn()">{{getNav()[1].ville | uppercase}}</button></div> 
+					 <div class="hover"><button (click)="metzOn()">{{getNav()[2].ville | uppercase}}</button></div> 
+					 <div class="hover"><button (click)="reimsOn()">{{getNav()[3].ville | uppercase}}</button></div> 
        			 </article>
     		</header>
 			<article [class.apiOn]="nancyButton===true" [class.apiOff]="nancyButton===false">
@@ -97,6 +100,77 @@
 				<div class="infoMeteo">
 					<p>Fahrenheit : {{infosNancy.main.temp}} </p>
 					<p>wind speed : {{infosNancy.wind.speed}} </p>
+				</div>
+				
+				
+			</article>
+			<article [class.apiSOn]="strasbourgButton===true" [class.apiSOff]="strasbourgButton===false">
+				<h1>{{infosStras.name}}</h1>
+				<div class="meteo">
+					<p>{{infosStras.weather[0].main}}</p>
+					<div class="nuagePluvieux" *ngIf="infosStras.weather[0].description==='cloudy'"><svg width="100%" height="100%" viewBox="0 0 267 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+						<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+						<path d="M17.8572 135.256L31.4787 119.286" stroke="#F1C40F"/>
+						<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+						<path d="M124.839 37.3017L132.581 17.7917" stroke="#F1C40F"/>
+						<path d="M21.9068 63.8422L3.09897 54.5238" stroke="#F1C40F"/>
+						<path d="M36.7854 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+						<path d="M94.4042 21.9066L96.2707 1" stroke="#F1C40F"/>
+						<path d="M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" fill="#2C3E50"/>
+						<path d="M122.752 132C144.5 121 126.805 93.7582 122.752 88.938M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" stroke="#292E33" stroke-width="5"/>
+						</svg>
+					</div>
+					<div class="nuageEclaircie" *ngIf="infosStras.weather[0].description==='scattered clouds'"><svg width="100%" height="100%" viewBox="0 0 267 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+						<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+						<path d="M17.8572 135.256L31.4787 119.286" stroke="#F1C40F"/>
+						<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+						<path d="M124.839 37.3017L132.581 17.7917" stroke="#F1C40F"/>
+						<path d="M21.9068 63.8422L3.09897 54.5238" stroke="#F1C40F"/>
+						<path d="M36.7854 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+						<path d="M94.4042 21.9066L96.2707 1" stroke="#F1C40F"/>
+						<path d="M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" fill="#EEEEEE"/>
+						<path d="M122.752 132C144.5 121 126.805 93.7582 122.752 88.938M122.752 88.938C66.5 33.5 0.51403 130.07 104.365 168.5C118.703 174.9 159 195.5 194 188.5C300.5 172.5 268.018 21.9381 214.018 72.938C207.518 -12.062 93.5 33.5 122.752 88.938Z" stroke="#E2E2E2" stroke-width="5"/>
+						</svg>
+						
+					</div>
+					<div class="clear" *ngIf="infosStras.weather[0].description==='clear sky'">
+						<svg width="100%" height="100%" viewBox="0 0 165 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="79" cy="80" r="53" fill="#F1C40F"/>
+							<path d="M59.9751 22.4895L53.2704 2.59937" stroke="#F1C40F"/>
+							<path d="M6.23289 133.027L24.1506 122.094" stroke="#F1C40F"/>
+							<path d="M78 167.971L78.8786 147" stroke="#F1C40F"/>
+							<path d="M118.307 157.474L108.359 138.991" stroke="#F1C40F"/>
+							<path d="M130.312 114.521L149.309 123.448" stroke="#F1C40F"/>
+							<path d="M66.8572 88.2559L80.4787 72.2865" stroke="#F1C40F"/>
+							<path d="M21.9883 91.2559L1 91.5026" stroke="#F1C40F"/>
+							<path d="M121.15 34.8256L136.271 20.2679" stroke="#F1C40F"/>
+							<path d="M21.9069 63.8422L3.099 54.5238" stroke="#F1C40F"/>
+							<path d="M36.7853 37.852L23.0392 21.9897" stroke="#F1C40F"/>
+							<path d="M94.4043 21.9066L96.2708 1" stroke="#F1C40F"/>
+							<path d="M143.266 53.9789L163.319 47.7769" stroke="#F1C40F"/>
+							<path d="M37 157.969L50.6215 142" stroke="#F1C40F"/>
+							<path d="M143.815 86.5692L164.777 85.493" stroke="#F1C40F"/>
+							</svg>
+							
+					</div>
+					<div class="overcast" *ngIf="infosStras.weather[0].description==='overcast clouds' || infosStras.weather[0].description==='broken clouds' ">
+					<svg width="100%" height="100%" viewBox="0 0 367 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M76.061 107.054C19.8087 51.6163 -46.1773 148.187 57.6741 186.616C72.0122 193.016 112.309 213.616 147.309 206.616C253.809 190.616 221.327 40.0544 167.327 91.0543C160.827 6.05436 46.8088 51.6163 76.061 107.054Z" fill="#EEEEEE"/>
+						<path d="M76.061 150.116C97.8087 139.116 80.1139 111.875 76.061 107.054M76.061 107.054C19.8087 51.6163 -46.1773 148.187 57.6741 186.616C72.0122 193.016 112.309 213.616 147.309 206.616C253.809 190.616 221.327 40.0544 167.327 91.0543C160.827 6.05436 46.8088 51.6163 76.061 107.054Z" stroke="#E2E2E2" stroke-width="5"/>
+						<path d="M222.061 131.054C165.809 75.6163 99.8227 172.187 203.674 210.616C218.012 217.016 258.309 237.616 293.309 230.616C399.809 214.616 367.327 64.0544 313.327 115.054C306.827 30.0544 192.809 75.6163 222.061 131.054Z" fill="#EEEEEE"/>
+						<path d="M222.061 174.116C243.809 163.116 226.114 135.875 222.061 131.054M222.061 131.054C165.809 75.6163 99.8227 172.187 203.674 210.616C218.012 217.016 258.309 237.616 293.309 230.616C399.809 214.616 367.327 64.0544 313.327 115.054C306.827 30.0544 192.809 75.6163 222.061 131.054Z" stroke="#E2E2E2" stroke-width="5"/>
+						<path d="M183.061 66.0543C126.809 10.6163 60.8227 107.187 164.674 145.616C179.012 152.016 219.309 172.616 254.309 165.616C360.809 149.616 328.327 -0.945602 274.327 50.0543C267.827 -34.9456 153.809 10.6163 183.061 66.0543Z" fill="#EEEEEE"/>
+						<path d="M183.061 109.116C204.809 98.1163 187.114 70.8746 183.061 66.0543M183.061 66.0543C126.809 10.6163 60.8227 107.187 164.674 145.616C179.012 152.016 219.309 172.616 254.309 165.616C360.809 149.616 328.327 -0.945602 274.327 50.0543C267.827 -34.9456 153.809 10.6163 183.061 66.0543Z" stroke="#E2E2E2" stroke-width="5"/>
+						</svg>
+						</div>
+						<p>{{infosStras.weather[0].description}}</p>
+				</div>
+				<div class="border"></div>
+				<div class="infoMeteo">
+					<p>Fahrenheit : {{infosStras.main.temp}} </p>
+					<p>wind speed : {{infosStras.wind.speed}} </p>
 				</div>
 				
 				

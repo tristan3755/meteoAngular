@@ -135,7 +135,7 @@ button{
     border-radius: 50%;
     background:#2d3436;
 }
-@media(max-width:500px){
+@media(max-width:800px){
     .hover{
         width: 80px;
         height: 80px;
@@ -183,7 +183,7 @@ to{
 }
 }
 /*************************************api*********************/
-.apiOn{
+.apiOn,.apiSOn{
     background-color:transparent;
   position: absolute;
     display: flex;
@@ -195,7 +195,7 @@ justify-content: space-evenly;
     border-radius: 5px;
     backdrop-filter: blur(10px);
 
-}.apiOn h1{
+}.apiOn h1,.apiSOn h1{
     position: absolute;
     top: 10px;
     font-family: 'Caveat', cursive;
@@ -205,7 +205,7 @@ justify-content: space-evenly;
     color: white;
     text-transform: uppercase;
 }
-.apiOff{
+.apiOff,.apiSOff{
     background-color:#2d3436;
     position: absolute;
     display: none;
