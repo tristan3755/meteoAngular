@@ -4,14 +4,14 @@ section{
     position: relative;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;  
   background-color:#2d3436;
 }
 .appMeteo{
 position: relative;
 width: 98%;
-height: 98vh;
+min-height: 98vh;
 background-image: url("../../assets/images/Group1.jpg");
 background-size:cover;
 border-radius: 8px;
@@ -145,6 +145,25 @@ button{
         height: 70px;
         font-size:50%;
     }
+    header{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    
+    }
+    article{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
 .hover:hover{
     cursor: pointer;
@@ -166,15 +185,27 @@ to{
 /*************************************api*********************/
 .apiOn{
     background-color:transparent;
-    position: absolute;
+  position: absolute;
     display: flex;
-    align-self: center;
-    height: 83vh;
-    width: 83%;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+    min-height: 100vh;
+    width: 100%;
     border-radius: 5px;
     backdrop-filter: blur(10px);
 
-}.apiOff{
+}.apiOn h1{
+    position: absolute;
+    top: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 5vmin;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+.apiOff{
     background-color:#2d3436;
     position: absolute;
     display: none;
@@ -182,7 +213,31 @@ to{
     height: 83vh;
     width: 83%;
     border-radius: 5px;
-}.nuagePluvieux,.nuageEclaircie,.clear{
+}.nuagePluvieux,.nuageEclaircie,.clear,.overcast{
     width: 200px;
+    max-width: 80%;
     height: 200px;
+}
+.border{
+    height: 50%;
+    width: 0.5px;
+    background-color: white;
+}
+.meteo,.infoMeteo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width:40%;
+    min-width: 100px;
+}
+
+.meteo p,.infoMeteo p{
+    font-family: 'Caveat', cursive;
+    font-size: 3vmin;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
 }
