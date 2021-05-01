@@ -183,19 +183,19 @@ to{
 }
 }
 /*************************************api*********************/
-.apiOn,.apiSOn{
+.apiOn,.apiSOn,.apiMOn,.apiROn{
     background-color:transparent;
-  position: absolute;
+    position: absolute;
     display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     min-height: 100vh;
     width: 100%;
     border-radius: 5px;
     backdrop-filter: blur(10px);
 
-}.apiOn h1,.apiSOn h1{
+}.apiOn h1,.apiSOn h1,.apiMOn h1,.apiROn h1{
     position: absolute;
     top: 10px;
     font-family: 'Caveat', cursive;
@@ -205,7 +205,7 @@ justify-content: space-evenly;
     color: white;
     text-transform: uppercase;
 }
-.apiOff,.apiSOff{
+.apiOff,.apiSOff,.apiMOff,.apiROff{
     background-color:#2d3436;
     position: absolute;
     display: none;
@@ -213,7 +213,7 @@ justify-content: space-evenly;
     height: 83vh;
     width: 83%;
     border-radius: 5px;
-}.nuagePluvieux,.nuageEclaircie,.clear,.overcast{
+}.nuagePluvieux,.nuageEclaircie,.clear,.overcast,.mist,.pluie{
     width: 200px;
     max-width: 80%;
     height: 200px;
