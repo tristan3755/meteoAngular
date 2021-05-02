@@ -22,8 +22,8 @@ align-items: center;
 justify-content: center;
 }
 #titreSvg{
-    width: 800px;
-    max-width: 100%;
+    width: 400px;
+    max-width: 70%;
     height: 40vh;
     position: absolute;
 }
@@ -153,7 +153,9 @@ button{
     button{
         width: 70px;
         height: 70px;
-        font-size:50%;
+        font-size:70%;
+        text-align: center;
+       word-break: break-all;
     }
     header{
         position: absolute;
@@ -182,16 +184,9 @@ button{
     background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 /**********************pathLettres********************/
-.lettre1{
-    
-    filter: blur(10px);
-    animation:blur1 forwards 1s;
-    }
-@keyframes blur1{
-to{
-   filter: blur(0px);
-}
-}
+
+
+
 /*************************************api*********************/
 .apiOn,.apiSOn,.apiMOn,.apiROn{
     background-color:transparent;
@@ -209,7 +204,7 @@ to{
     position: absolute;
     top: 10px;
     font-family: 'Caveat', cursive;
-    font-size: 5vmin;
+    font-size: 6vmin;
     letter-spacing: 2px;
     font-weight: bold;
     color: white;
@@ -223,6 +218,7 @@ to{
     height: 83vh;
     width: 83%;
     border-radius: 5px;
+
 }.nuagePluvieux,.nuageEclaircie,.clear,.overcast,.mist,.pluie{
     width: 200px;
     max-width: 80%;
@@ -245,7 +241,7 @@ to{
 
 .meteo p,.infoMeteo p{
     font-family: 'Caveat', cursive;
-    font-size: 3vmin;
+    font-size: 4vmin;
     letter-spacing: 2px;
     font-weight: bold;
     color: white;
