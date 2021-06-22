@@ -11,7 +11,7 @@ export class MetzService {
   }
 
   getInfosMetz(){
-    let urlMetz="https://api.openweathermap.org/data/2.5/weather?q=Metz&appid=28da2799b73f06513b062e2b6178e72d";
+    let urlMetz="https://api.openweathermap.org/data/2.5/weather?q=Metz&appid=28da2799b73f06513b062e2b6178e72d&units=metric";
     return this.requeteMetz.get(urlMetz)
   }
 }

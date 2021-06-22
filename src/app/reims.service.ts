@@ -10,7 +10,7 @@ export class ReimsService {
 
 
   getInfosReims(){
-    let url="https://api.openweathermap.org/data/2.5/weather?q=Reims&appid=28da2799b73f06513b062e2b6178e72d"
+    let url="https://api.openweathermap.org/data/2.5/weather?q=Reims&appid=28da2799b73f06513b062e2b6178e72d&units=metric"
     return this.requete.get(url)
   }
 
